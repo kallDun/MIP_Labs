@@ -15,9 +15,9 @@ namespace Lab_1
 
         static void Main(string[] args)
         {
-            ImpactModel leading = new(rangeMin: 0.6, rangeMax: 0.8, intensity: 5, perceptionCofficient: 1);
-            ImpactModel coordinator1 = new(rangeMin: 0.3, rangeMax: 0.4, intensity: 8, perceptionCofficient: 0.9);
-            ImpactModel coordinator2 = new(rangeMin: 0.2, rangeMax: 0.3, intensity: 10, perceptionCofficient: 0.8);
+            ImpactModel leading = new(rangeMin: 0.5, rangeMax: 0.8, intensity: 5, perceptionCofficient: 1);
+            ImpactModel coordinator1 = new(rangeMin: 0.3, rangeMax: 0.4, intensity: 10, perceptionCofficient: 0.85);
+            ImpactModel coordinator2 = new(rangeMin: 0.25, rangeMax: 0.3, intensity: 12, perceptionCofficient: 0.75);
 
             process = new(start_date, leading, coordinator1, coordinator2);
             new Thread(Update).Start();
@@ -36,7 +36,7 @@ namespace Lab_1
                 Thread.Sleep(500);
                 process.ChangeDay();
             }
-            Console.WriteLine($"Guy start doing his work in {(process.Date - start_date).Days} days");
+            Console.WriteLine($"State: {process.State}. Guy started doing his work in {(process.Date - start_date).Days} days");
         }
     }
 }
