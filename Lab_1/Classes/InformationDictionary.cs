@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using static Lab_1.Classes.States;
 
 namespace Lab_1.Classes
@@ -55,7 +51,17 @@ namespace Lab_1.Classes
                     { Completion, 0.1 }
                 }
             },
-
+            {
+                Completion,
+                new()
+                {
+                    { Waiting, -1 },
+                    { LowReadiness, -1 },
+                    { MediumReadiness, -1 },
+                    { HighReadiness, -1 },
+                    { Completion, 0 }
+                }
+            }
         };
  
     }
