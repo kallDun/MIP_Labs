@@ -26,9 +26,9 @@ namespace Lab_1.Classes
 
         public void ChangeDay()
         {
-            foreach (var model in impact_models)
+            for (int i = 0; i < impact_models.Count; i++)
             {
-                MakeImpact(model.Key);
+                MakeImpact(impact_models.ElementAt(i).Key);
                 CheckMemoryToChangeState();
             }
             date = date.AddDays(1);
