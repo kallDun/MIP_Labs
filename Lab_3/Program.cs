@@ -29,6 +29,8 @@ namespace Lab_3
             Calc calc = new Calc(q, Pп, Pв, V_0);
             Console.WriteLine($"Matrix = \n{string.Join("\n", calc.Matrix.Select(x => string.Join(" ", x)))}" +
                 $"\n\nmax_H(Y) = {calc.MaxH_Y}\nH(Y/x1) = {calc.H_Y_X1}\nC = {calc.C}\n");
+
+            Console.ReadKey();
         }
     }
 }
