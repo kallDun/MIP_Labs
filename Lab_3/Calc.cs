@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab_3
 {
@@ -19,12 +15,15 @@ namespace Lab_3
 
             matrix = new double[2][]
             {
-                new double[3]{q, pp, pv},
-                new double[3]{pp, q, pv}
+                new double[3] { q, pp, pv },
+                new double[3] { pp, q, pv },
             };
 
         }
 
-
+        public double[][] Matrix => matrix;
+        public double MaxH_Y => -1 * (2 * (((q + Pp) / 2) * Math.Log((q + Pp) / 2, 2)) + Pv * Math.Log(Pv, 2));
+        public double H_Y_X1 => -1 * (q * Math.Log(q, 2) + Pp * Math.Log(Pp, 2) + Pv * Math.Log(Pv, 2));
+        public double C => P0 * Math.Abs(MaxH_Y - H_Y_X1);
     }
 }
