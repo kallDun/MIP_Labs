@@ -28,6 +28,8 @@ namespace Lab_4
             Task__4_3 task__4_3 = new Task__4_3(A_, n, d_);
             string[] combinations_ = task__4_3.GetCombinations();   
             Console.WriteLine($"\n--- 4.3.3 ---\nCount of combinations: {combinations_.Length}\nCombinations: {string.Join(" ", combinations_)}");
+
+            Console.ReadKey();
         }
     }
 }
