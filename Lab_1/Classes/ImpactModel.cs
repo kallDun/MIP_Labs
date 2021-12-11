@@ -14,6 +14,5 @@
         public double RangeMax { get; }
         public int Intensity { get; }
         public double PerceptionCofficient { get; }
-
     }
 }
